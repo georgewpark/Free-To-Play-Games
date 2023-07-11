@@ -1,6 +1,6 @@
 # Free-To-Play Games
 
-Using React to fetch and filter free-to-play games retrieved from the [FreeToGame API](https://www.freetogame.com/api-doc).
+Using React to display and filter free-to-play games retrieved from the [FreeToGame API](https://www.freetogame.com/api-doc).
 
 ![Project Title Demo](demo-image.jpg 'Free-To-Play Games Demo')
 
