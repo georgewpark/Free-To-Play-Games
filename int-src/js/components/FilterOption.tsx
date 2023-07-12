@@ -23,6 +23,7 @@ const FilterOption = ({
       <select
         id={filterId}
         className='cursor-pointer rounded border border-slate-800 bg-slate-700 bg-gradient-to-b from-slate-700 to-slate-800 p-1.5 text-center text-white transition-colors hover:bg-slate-800'
+        value={currentValue}
         onChange={e => onFilterChange(e.target.value)}
       >
         {options.map(option => {
@@ -30,11 +31,7 @@ const FilterOption = ({
             ? valueModifier(option.toString().toLowerCase())
             : option
           return (
-            <option
-              key={option}
-              value={formattedValue}
-              selected={formattedValue === currentValue}
-            >
+            <option key={option} value={formattedValue}>
               {option}
             </option>
           )
