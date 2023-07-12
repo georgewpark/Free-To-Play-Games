@@ -1,12 +1,16 @@
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Game } from '../types/types'
+import GamesContext from '../context/GamesContext'
 import { WindowsIcon, WebBrowserIcon } from './Icons'
 
 type GameItemProps = {
   game: Game
+  index: number
 }
 
-const GameItem = ({ game }: GameItemProps) => {
+const GameItem = ({ game, index }: GameItemProps) => {
+  const { firstGame } = useContext(GamesContext)
   const navigate = useNavigate()
 
   return (
@@ -37,6 +41,7 @@ const GameItem = ({ game }: GameItemProps) => {
           )}
         </div>
         <button
+          ref={index === 0 ? firstGame : null}
           className='absolute inset-0'
           onClick={() => navigate(`/game/${game.id}`)}
         >

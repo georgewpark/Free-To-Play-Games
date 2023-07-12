@@ -1,7 +1,9 @@
 import {
   useState,
+  useRef,
   createContext,
   ReactNode,
+  RefObject,
   Dispatch,
   SetStateAction,
 } from 'react'
@@ -10,6 +12,7 @@ import { Game } from '../types/types'
 type GamesContextType = {
   gameItems: Game[]
   setGameItems: Dispatch<SetStateAction<Game[]>>
+  firstGame: RefObject<HTMLButtonElement>
   selectedPlatform: string
   setSelectedPlatform: Dispatch<SetStateAction<string>>
   selectedSort: string
@@ -41,12 +44,14 @@ export const GamesProvider = ({ children }: GamesProviderProps) => {
   const [resultsPerPage, setResultsPerPage] = useState(40)
   const [loading, setLoading] = useState(true)
   const [currentGame, setCurrentGame] = useState({} as Game)
+  const firstGame = useRef<HTMLButtonElement>(null)
 
   return (
     <GamesContext.Provider
       value={{
         gameItems,
         setGameItems,
+        firstGame,
         selectedPlatform,
         setSelectedPlatform,
         selectedSort,

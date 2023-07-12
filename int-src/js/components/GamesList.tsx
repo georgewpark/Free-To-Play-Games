@@ -23,8 +23,8 @@ const GamesList = () => {
                 games
               </p>
               <ul className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-                {gameItems.slice(firstItem, lastItem).map(game => (
-                  <GameItem key={game.id} game={game} />
+                {gameItems.slice(firstItem, lastItem).map((game, i) => (
+                  <GameItem key={game.id} game={game} index={i} />
                 ))}
               </ul>
             </>

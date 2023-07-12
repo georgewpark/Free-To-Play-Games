@@ -10,7 +10,10 @@ const Games = () => {
     selectedPlatform,
     selectedSort,
     selectedCategory,
+    gameItems,
     setGameItems,
+    firstGame,
+    currentPage,
     setCurrentPage,
     setLoading,
   } = useContext(GamesContext)
@@ -49,6 +52,12 @@ const Games = () => {
 
     return () => fetchController.abort()
   }, [selectedPlatform, selectedSort, selectedCategory])
+
+  useEffect(() => {
+    if (gameItems.length > 0) {
+      firstGame.current?.focus()
+    }
+  }, [currentPage])
 
   return (
     <>
