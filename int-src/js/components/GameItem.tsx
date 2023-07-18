@@ -42,7 +42,7 @@ const GameItem = ({ game, index }: GameItemProps) => {
         </div>
         <button
           ref={index === 0 ? firstGame : null}
-          className='absolute inset-0'
+          className='absolute left-0 top-0 h-full w-full'
           onClick={() => navigate(`/game/${game.id}`)}
         >
           <span className='sr-only'>learn more about "{game.title}"</span>
