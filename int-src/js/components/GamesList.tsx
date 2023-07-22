@@ -8,7 +8,7 @@ const GamesList = () => {
     useContext(GamesContext)
 
   const firstItem = currentPage * resultsPerPage - resultsPerPage
-  const lastItem = Math.min(gameItems.length + 1, currentPage * resultsPerPage)
+  const lastItem = Math.min(gameItems.length, currentPage * resultsPerPage)
 
   return (
     <section aria-live='polite' aria-label='games list'>
@@ -19,8 +19,7 @@ const GamesList = () => {
           {gameItems.length > 0 ? (
             <>
               <p className='mb-4 text-center md:text-left'>
-                Showing {firstItem + 1}-{lastItem} of {gameItems.length + 1}{' '}
-                games
+                Showing {firstItem + 1}-{lastItem} of {gameItems.length} games
               </p>
               <ul className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {gameItems.slice(firstItem, lastItem).map((game, i) => (
