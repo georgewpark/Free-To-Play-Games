@@ -4,13 +4,19 @@ import GamesContext from '../context/GamesContext'
 const GameRequirements = () => {
   const { currentGame } = useContext(GamesContext)
 
+  const hasMinimumRequirements =
+    currentGame.minimum_system_requirements &&
+    !Object.values(currentGame.minimum_system_requirements).every(
+      req => req === null
+    )
+
   const hasRequirement = (requirement: string) => {
     return requirement && requirement !== '?'
   }
 
   return (
     <>
-      {currentGame.minimum_system_requirements && (
+      {hasMinimumRequirements && (
         <section className='py-10'>
           <div className='container mx-auto px-4'>
             <h2 className='mb-5 text-2xl'>System Requirements</h2>
