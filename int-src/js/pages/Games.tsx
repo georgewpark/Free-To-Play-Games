@@ -15,7 +15,7 @@ const Games = () => {
     firstGame,
     currentPage,
     setCurrentPage,
-    setLoading,
+    setLoading
   } = useContext(GamesContext)
 
   const platform = `platform=${selectedPlatform}`
@@ -32,9 +32,9 @@ const Games = () => {
     fetch(`${apiBaseUrl}/games?${platform}${sortBy}${category}`, {
       headers: {
         'X-RapidAPI-Host': apiHost,
-        'X-RapidAPI-Key': apiKey,
+        'X-RapidAPI-Key': apiKey
       },
-      signal,
+      signal
     })
       .then(res => res.json())
       .then(data => {

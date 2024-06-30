@@ -3,7 +3,7 @@ export const sortOptions: string[] = [
   'Relevance',
   'Alphabetical',
   'Release Date',
-  'Popularity',
+  'Popularity'
 ]
 export const categoryOptions: string[] = [
   'All',
@@ -51,6 +51,6 @@ export const categoryOptions: string[] = [
   'Low-Spec',
   'Tower Defense',
   'Horror',
-  'MMORTS',
+  'MMORTS'
 ]
 export const resultsPerPageOptions: number[] = [40, 60, 80, 100]

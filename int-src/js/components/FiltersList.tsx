@@ -4,7 +4,7 @@ import {
   platformOptions,
   sortOptions,
   categoryOptions,
-  resultsPerPageOptions,
+  resultsPerPageOptions
 } from '../data/FilterOptions'
 import FilterOption from './FilterOption'
 
@@ -18,7 +18,7 @@ const FiltersList = () => {
     setSelectedCategory,
     setCurrentPage,
     resultsPerPage,
-    setResultsPerPage,
+    setResultsPerPage
   } = useContext(GamesContext)
 
   return (

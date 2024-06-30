@@ -21,9 +21,9 @@ const GameDetails = () => {
     fetch(`${apiBaseUrl}/game?id=${gameId}`, {
       headers: {
         'X-RapidAPI-Host': apiHost,
-        'X-RapidAPI-Key': apiKey,
+        'X-RapidAPI-Key': apiKey
       },
-      signal,
+      signal
     })
       .then(res => res.json())
       .then(data => {

@@ -5,7 +5,7 @@ import {
   ReactNode,
   RefObject,
   Dispatch,
-  SetStateAction,
+  SetStateAction
 } from 'react'
 import { Game } from '../types/types'
 
@@ -65,7 +65,7 @@ export const GamesProvider = ({ children }: GamesProviderProps) => {
         loading,
         setLoading,
         currentGame,
-        setCurrentGame,
+        setCurrentGame
       }}
     >
       {children}

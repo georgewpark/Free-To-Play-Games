@@ -11,7 +11,7 @@ const FilterOption = ({
   options,
   currentValue,
   onFilterChange,
-  valueModifier,
+  valueModifier
 }: FilterOptionProps) => {
   const filterId = label.toLowerCase().replaceAll(' ', '-')
 
