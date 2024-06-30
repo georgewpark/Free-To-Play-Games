@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useRef } from 'react'
 import GamesContext from '../context/GamesContext'
 import FiltersList from '../components/FiltersList'
 import GamesList from '../components/GamesList'
@@ -17,6 +17,8 @@ const Games = () => {
     setCurrentPage,
     setLoading
   } = useContext(GamesContext)
+
+  const initialRender = useRef(true)
 
   const platform = `platform=${selectedPlatform}`
   const sortBy = `&sort-by=${selectedSort}`
@@ -46,8 +48,13 @@ const Games = () => {
       })
       .catch(() => setGameItems([]))
       .finally(() => {
-        setCurrentPage(1)
         setLoading(false)
+
+        if (!initialRender.current) {
+          setCurrentPage(1)
+        } else {
+          initialRender.current = false
+        }
       })
 
     return () => fetchController.abort()
