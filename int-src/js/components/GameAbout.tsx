@@ -25,7 +25,7 @@ const GameAbout = () => {
                 target='_blank'
               >
                 Play {currentGame.title}
-                <ExternalLinkIcon classList='absolute -right-3 top-1 w-2' />
+                <ExternalLinkIcon classList='absolute -right-3 top-1.5 w-2' />
               </a>
             )}
           </div>

@@ -6,6 +6,7 @@ import GameHeader from '../components/GameHeader'
 import GameAbout from '../components/GameAbout'
 import GameRequirements from '../components/GameRequirements'
 import Loader from '../components/Loader'
+import Footer from '../components/Footer'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const GameDetails = () => {
@@ -46,6 +47,7 @@ const GameDetails = () => {
             <GameAbout />
             <GameRequirements />
           </main>
+          <Footer />
         </>
       )}
     </div>

@@ -3,6 +3,7 @@ import GamesContext from '../context/GamesContext'
 import FiltersList from '../components/FiltersList'
 import GamesList from '../components/GamesList'
 import Pagination from '../components/Pagination'
+import Footer from '../components/Footer'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const Games = () => {
@@ -80,6 +81,7 @@ const Games = () => {
           <Pagination />
         </div>
       </main>
+      <Footer />
     </>
   )
 }
