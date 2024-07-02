@@ -1,4 +1,4 @@
-import { ReactElement, useContext } from 'react'
+import { ReactElement, useContext, useMemo } from 'react'
 import GamesContext from '../../context/GamesContext'
 import { ChevronLeftIcon, ChevronRightIcon } from '../shared/Icons'
 
@@ -6,7 +6,10 @@ const Pagination = () => {
   const { gameItems, currentPage, setCurrentPage, resultsPerPage } =
     useContext(GamesContext)
 
-  const totalPages = Math.ceil((gameItems.length + 1) / resultsPerPage)
+  const totalPages = useMemo(
+    () => Math.ceil((gameItems.length + 1) / resultsPerPage),
+    [gameItems, resultsPerPage]
+  )
 
   let pageButtons: ReactElement[] = []
 
