@@ -1,6 +1,6 @@
-import { useContext, ReactElement } from 'react'
-import GamesContext from '../context/GamesContext'
-import { ChevronLeftIcon, ChevronRightIcon } from './Icons'
+import { ReactElement, useContext } from 'react'
+import GamesContext from '../../context/GamesContext'
+import { ChevronLeftIcon, ChevronRightIcon } from '../shared/Icons'
 
 const Pagination = () => {
   const { gameItems, currentPage, setCurrentPage, resultsPerPage } =

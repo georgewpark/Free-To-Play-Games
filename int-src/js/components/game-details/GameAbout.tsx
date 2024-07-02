@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import GamesContext from '../context/GamesContext'
-import { ExternalLinkIcon } from './Icons'
+import GamesContext from '../../context/GamesContext'
+import { ExternalLinkIcon } from '../shared/Icons'
 
 const GameAbout = () => {
   const { currentGame } = useContext(GamesContext)

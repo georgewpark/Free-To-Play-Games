@@ -1,9 +1,9 @@
-import { useEffect, useContext, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
+import FiltersList from '../components/games-listing/FiltersList'
+import GamesList from '../components/games-listing/GamesList'
+import Pagination from '../components/games-listing/Pagination'
+import Footer from '../components/shared/Footer'
 import GamesContext from '../context/GamesContext'
-import FiltersList from '../components/FiltersList'
-import GamesList from '../components/GamesList'
-import Pagination from '../components/Pagination'
-import Footer from '../components/Footer'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const Games = () => {

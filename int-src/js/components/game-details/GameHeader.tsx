@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import GamesContext from '../context/GamesContext'
+import GamesContext from '../../context/GamesContext'
 
 const GameHeader = () => {
   const { currentGame } = useContext(GamesContext)

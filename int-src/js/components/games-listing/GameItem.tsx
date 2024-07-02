@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Game } from '../types/types'
-import GamesContext from '../context/GamesContext'
-import { WindowsIcon, WebBrowserIcon } from './Icons'
+import GamesContext from '../../context/GamesContext'
+import { Game } from '../../types/types'
+import { WebBrowserIcon, WindowsIcon } from '../shared/Icons'
 
 type GameItemProps = {
   game: Game

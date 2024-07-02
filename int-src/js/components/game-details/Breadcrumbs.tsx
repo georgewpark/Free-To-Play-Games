@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import GamesContext from '../context/GamesContext'
+import GamesContext from '../../context/GamesContext'
 
 const Breadcrumbs = () => {
   const navigate = useNavigate()

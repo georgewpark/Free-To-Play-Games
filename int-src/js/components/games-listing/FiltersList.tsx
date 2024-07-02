@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import GamesContext from '../context/GamesContext'
+import GamesContext from '../../context/GamesContext'
 import {
-  platformOptions,
-  sortOptions,
   categoryOptions,
-  resultsPerPageOptions
-} from '../data/FilterOptions'
+  platformOptions,
+  resultsPerPageOptions,
+  sortOptions
+} from '../../data/FilterOptions'
 import FilterOption from './FilterOption'
 
 const FiltersList = () => {

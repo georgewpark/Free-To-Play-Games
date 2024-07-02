@@ -1,5 +1,5 @@
-import { useContext, ReactElement } from 'react'
-import GamesContext from '../context/GamesContext'
+import { ReactElement, useContext } from 'react'
+import GamesContext from '../../context/GamesContext'
 
 const GridSkeleton = () => {
   const { resultsPerPage } = useContext(GamesContext)

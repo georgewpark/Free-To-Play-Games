@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import GamesContext from '../context/GamesContext'
+import GamesContext from '../../context/GamesContext'
+import GameItem from './GameItem'
 import GridSkeleton from './GridSkeleton'
-import GameItem from '../components/GameItem'
 
 const GamesList = () => {
   const { currentPage, resultsPerPage, gameItems, loading } =

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { GamesProvider } from '../context/GamesContext'
-import Games from './Games'
 import GameDetails from './GameDetails'
+import Games from './Games'
 
 const FreeToPlayGames = () => {
   return (
