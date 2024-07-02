@@ -27,10 +27,7 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader',
-            options: {
-              interpolate: true
-            }
+            loader: 'html-loader'
           }
         ]
       },
@@ -85,7 +82,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'int-src/html/index.html',
-      minify: false,
       hash: true
     })
   ]

@@ -1,10 +1,25 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="author" content="George W. Park" />
+    <meta
+      name="description"
+      content="Using React to display and filter free-to-play games retrieved from the FreeToGame API."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Free-To-Play Games</title>
-    ${require("./partials/head.html")}
   </head>
   <body class="bg-gray-900 font-kanit text-slate-50 drop-shadow">
-    ${require("./partials/ftp-games.html")}
+    <div class="flex min-h-svh flex-col" id="ftp-games"></div>
   </body>
 </html>
