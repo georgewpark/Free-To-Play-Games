@@ -25,9 +25,9 @@ const GameRequirements = () => {
               {hasRequirement(currentGame.minimum_system_requirements.os) && (
                 <li>
                   <h3 className='mb-0.5 text-yellow-400'>Operating System</h3>
-                  <span className='font-light leading-tight'>
+                  <p className='font-light'>
                     {currentGame.minimum_system_requirements.os}
-                  </span>
+                  </p>
                 </li>
               )}
               {hasRequirement(
@@ -35,9 +35,9 @@ const GameRequirements = () => {
               ) && (
                 <li>
                   <h3 className='mb-0.5 text-yellow-400'>Graphics Card</h3>
-                  <span className='font-light leading-tight'>
+                  <p className='font-light'>
                     {currentGame.minimum_system_requirements.graphics}
-                  </span>
+                  </p>
                 </li>
               )}
               {hasRequirement(
@@ -45,9 +45,9 @@ const GameRequirements = () => {
               ) && (
                 <li>
                   <h3 className='mb-0.5 text-yellow-400'>Processor</h3>
-                  <span className='font-light leading-tight'>
+                  <p className='font-light'>
                     {currentGame.minimum_system_requirements.processor}
-                  </span>
+                  </p>
                 </li>
               )}
               {hasRequirement(
@@ -55,9 +55,9 @@ const GameRequirements = () => {
               ) && (
                 <li>
                   <h3 className='mb-0.5 text-yellow-400'>Memory</h3>
-                  <span className='font-light leading-tight'>
+                  <p className='font-light'>
                     {currentGame.minimum_system_requirements.memory}
-                  </span>
+                  </p>
                 </li>
               )}
               {hasRequirement(
@@ -65,9 +65,9 @@ const GameRequirements = () => {
               ) && (
                 <li>
                   <h3 className='mb-0.5 text-yellow-400'>Storage</h3>
-                  <span className='font-light leading-tight'>
+                  <p className='font-light'>
                     {currentGame.minimum_system_requirements.storage}
-                  </span>
+                  </p>
                 </li>
               )}
             </ul>
