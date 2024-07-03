@@ -7,7 +7,7 @@ import Footer from '../components/shared/Footer'
 import GamesContext from '../context/GamesContext'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
-const Games = () => {
+const GamesListing = () => {
   const {
     selectedPlatform,
     selectedSort,
@@ -89,4 +89,4 @@ const Games = () => {
   )
 }
 
-export default Games
+export default GamesListing
