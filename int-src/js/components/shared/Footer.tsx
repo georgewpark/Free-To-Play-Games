@@ -10,10 +10,10 @@ const Footer = () => {
           <a
             href='https://www.freetogame.com/api-doc'
             target='_blank'
-            className='relative whitespace-nowrap underline underline-offset-2 transition-colors hover:text-yellow-400 focus:text-yellow-400'
+            className='relative whitespace-nowrap pr-3 underline underline-offset-2 transition-colors hover:text-yellow-400 focus:text-yellow-400'
           >
             FreeToGame API
-            <ExternalLinkIcon classList='absolute -right-3 top-1.5 w-2' />
+            <ExternalLinkIcon classList='absolute right-0 top-1.5 w-2 h-2' />
           </a>
         </p>
       </Container>
