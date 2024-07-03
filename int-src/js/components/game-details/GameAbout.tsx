@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
+import Container from '../shared/Container'
 import { ExternalLinkIcon } from '../shared/Icons'
 
 const GameAbout = () => {
@@ -7,7 +8,7 @@ const GameAbout = () => {
 
   return (
     <section className='py-10'>
-      <div className='container mx-auto px-4'>
+      <Container>
         <h2 className='mb-5 text-2xl'>
           About <span className='text-yellow-400'>{currentGame.title}</span>
         </h2>
@@ -31,7 +32,7 @@ const GameAbout = () => {
           </div>
           {currentGame.thumbnail && <img src={currentGame.thumbnail} alt='' />}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

@@ -1,9 +1,10 @@
+import Container from './Container'
 import { ExternalLinkIcon } from './Icons'
 
 const Footer = () => {
   return (
     <footer className='mt-auto bg-gray-950'>
-      <div className='container mx-auto px-4 py-4'>
+      <Container classList='py-4'>
         <p className='text-center font-light'>
           Game information retrieved from the{' '}
           <a
@@ -15,7 +16,7 @@ const Footer = () => {
             <ExternalLinkIcon classList='absolute -right-3 top-1.5 w-2' />
           </a>
         </p>
-      </div>
+      </Container>
     </footer>
   )
 }

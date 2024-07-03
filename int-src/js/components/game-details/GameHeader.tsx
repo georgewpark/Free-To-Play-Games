@@ -1,12 +1,13 @@
 import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
+import Container from '../shared/Container'
 
 const GameHeader = () => {
   const { currentGame } = useContext(GamesContext)
 
   return (
     <header className='relative h-96'>
-      <div className='container mx-auto flex h-full px-4'>
+      <Container classList='flex h-full'>
         <div className='absolute inset-0 -z-10 after:absolute after:inset-0 after:bg-black after:opacity-75'>
           <img
             src={
@@ -20,7 +21,7 @@ const GameHeader = () => {
         <h1 className='m-auto text-center text-4xl text-white md:text-6xl'>
           {currentGame.title}
         </h1>
-      </div>
+      </Container>
     </header>
   )
 }

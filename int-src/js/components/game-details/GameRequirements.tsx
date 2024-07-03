@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
+import Container from '../shared/Container'
 
 const GameRequirements = () => {
   const { currentGame } = useContext(GamesContext)
@@ -18,7 +19,7 @@ const GameRequirements = () => {
     <>
       {hasMinimumRequirements && (
         <section className='py-10'>
-          <div className='container mx-auto px-4'>
+          <Container>
             <h2 className='mb-5 text-2xl'>System Requirements</h2>
             <ul className='grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-8'>
               {hasRequirement(currentGame.minimum_system_requirements.os) && (
@@ -70,7 +71,7 @@ const GameRequirements = () => {
                 </li>
               )}
             </ul>
-          </div>
+          </Container>
         </section>
       )}
     </>
