@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GameDetailsContext from '../../context/GameDetailsContext'
 import Container from '../shared/Container'
 import { ExternalLinkIcon } from '../shared/Icons'
 
 const GameDetailsAbout = () => {
-  const { currentGame } = useContext(GamesContext)
+  const { currentGame } = useContext(GameDetailsContext)
 
   return (
     <section className='py-10'>

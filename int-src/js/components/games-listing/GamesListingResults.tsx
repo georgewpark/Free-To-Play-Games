@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GamesListingContext from '../../context/GamesListingContext'
 import GamesListingItem from './GamesListingItem'
 import GamesListingLoader from './GamesListingLoader'
 
 const GamesListingResults = () => {
   const { currentPage, resultsPerPage, gameItems, loading } =
-    useContext(GamesContext)
+    useContext(GamesListingContext)
 
   const firstItem = currentPage * resultsPerPage - resultsPerPage
   const lastItem = Math.min(gameItems.length, currentPage * resultsPerPage)

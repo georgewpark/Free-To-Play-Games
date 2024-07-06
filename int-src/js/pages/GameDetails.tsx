@@ -6,11 +6,11 @@ import GameDetailsHeader from '../components/game-details/GameDetailsHeader'
 import GameDetailsLoader from '../components/game-details/GameDetailsLoader'
 import GameDetailsRequirements from '../components/game-details/GameDetailsRequirements'
 import Footer from '../components/shared/Footer'
-import GamesContext from '../context/GamesContext'
+import GameDetailsContext from '../context/GameDetailsContext'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const GameDetails = () => {
-  const { setCurrentGame, loading, setLoading } = useContext(GamesContext)
+  const { setCurrentGame, loading, setLoading } = useContext(GameDetailsContext)
   const { gameId } = useParams()
 
   useEffect(() => {

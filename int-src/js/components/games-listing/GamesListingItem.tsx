@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import GamesContext from '../../context/GamesContext'
+import GamesListingContext from '../../context/GamesListingContext'
 import { Game } from '../../types/types'
 import { WebBrowserIcon, WindowsIcon } from '../shared/Icons'
 
@@ -10,7 +10,7 @@ type GamesListingItemProps = {
 }
 
 const GamesListingItem = ({ game, index }: GamesListingItemProps) => {
-  const { firstGame } = useContext(GamesContext)
+  const { firstGame } = useContext(GamesListingContext)
   const navigate = useNavigate()
 
   return (

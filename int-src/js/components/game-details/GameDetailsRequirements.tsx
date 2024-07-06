@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GameDetailsContext from '../../context/GameDetailsContext'
 import Container from '../shared/Container'
 
 const GameDetailsRequirements = () => {
-  const { currentGame } = useContext(GamesContext)
+  const { currentGame } = useContext(GameDetailsContext)
 
   const hasMinimumRequirements =
     currentGame.minimum_system_requirements &&

@@ -5,7 +5,7 @@ import GamesListingPagination from '../components/games-listing/GamesListingPagi
 import GamesListingResults from '../components/games-listing/GamesListingResults'
 import Container from '../components/shared/Container'
 import Footer from '../components/shared/Footer'
-import GamesContext from '../context/GamesContext'
+import GamesListingContext from '../context/GamesListingContext'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const GamesListing = () => {
@@ -19,7 +19,7 @@ const GamesListing = () => {
     currentPage,
     setCurrentPage,
     setLoading
-  } = useContext(GamesContext)
+  } = useContext(GamesListingContext)
 
   const initialRender = useRef(true)
 

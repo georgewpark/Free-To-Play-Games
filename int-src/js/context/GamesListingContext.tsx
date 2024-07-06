@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { Game } from '../types/types'
 
-type GamesContextType = {
+type GamesListingContextType = {
   gameItems: Game[]
   setGameItems: Dispatch<SetStateAction<Game[]>>
   firstGame: RefObject<HTMLButtonElement>
@@ -25,17 +25,17 @@ type GamesContextType = {
   setResultsPerPage: Dispatch<SetStateAction<number>>
   loading: boolean
   setLoading: Dispatch<SetStateAction<boolean>>
-  currentGame: Game
-  setCurrentGame: Dispatch<SetStateAction<Game>>
 }
 
-type GamesProviderProps = {
+type GamesListingProviderProps = {
   children: ReactNode
 }
 
-const GamesContext = createContext({} as GamesContextType)
+const GamesListingContext = createContext({} as GamesListingContextType)
 
-export const GamesProvider = ({ children }: GamesProviderProps) => {
+export const GamesListingProvider = ({
+  children
+}: GamesListingProviderProps) => {
   const [gameItems, setGameItems] = useState<Game[]>([])
   const [selectedPlatform, setSelectedPlatform] = useState('all')
   const [selectedSort, setSelectedSort] = useState('relevance')
@@ -43,11 +43,10 @@ export const GamesProvider = ({ children }: GamesProviderProps) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [resultsPerPage, setResultsPerPage] = useState(40)
   const [loading, setLoading] = useState(true)
-  const [currentGame, setCurrentGame] = useState({} as Game)
   const firstGame = useRef<HTMLButtonElement>(null)
 
   return (
-    <GamesContext.Provider
+    <GamesListingContext.Provider
       value={{
         gameItems,
         setGameItems,
@@ -58,19 +57,17 @@ export const GamesProvider = ({ children }: GamesProviderProps) => {
         setSelectedSort,
         selectedCategory,
         setSelectedCategory,
-        currentPage,
-        setCurrentPage,
         resultsPerPage,
         setResultsPerPage,
+        currentPage,
+        setCurrentPage,
         loading,
-        setLoading,
-        currentGame,
-        setCurrentGame
+        setLoading
       }}
     >
       {children}
-    </GamesContext.Provider>
+    </GamesListingContext.Provider>
   )
 }
 
-export default GamesContext
+export default GamesListingContext

@@ -1,8 +1,8 @@
 import { ReactElement, useContext } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GamesListingContext from '../../context/GamesListingContext'
 
 const GamesListingLoader = () => {
-  const { resultsPerPage } = useContext(GamesContext)
+  const { resultsPerPage } = useContext(GamesListingContext)
 
   let items: ReactElement[] = []
 

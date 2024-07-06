@@ -1,10 +1,10 @@
 import { ReactElement, useContext, useMemo } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GamesListingContext from '../../context/GamesListingContext'
 import { ChevronLeftIcon, ChevronRightIcon } from '../shared/Icons'
 
 const GamesListingPagination = () => {
   const { gameItems, currentPage, setCurrentPage, resultsPerPage } =
-    useContext(GamesContext)
+    useContext(GamesListingContext)
 
   const totalPages = useMemo(
     () => Math.ceil((gameItems.length + 1) / resultsPerPage),

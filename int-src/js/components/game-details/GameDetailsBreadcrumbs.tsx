@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import GamesContext from '../../context/GamesContext'
+import GameDetailsContext from '../../context/GameDetailsContext'
 import Container from '../shared/Container'
 
 const GameDetailsBreadcrumbs = () => {
   const navigate = useNavigate()
-  const { currentGame } = useContext(GamesContext)
+  const { currentGame } = useContext(GameDetailsContext)
 
   return (
     <nav aria-label='breadcrumbs'>

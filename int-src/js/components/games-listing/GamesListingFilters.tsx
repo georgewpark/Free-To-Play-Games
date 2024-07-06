@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import GamesContext from '../../context/GamesContext'
+import GamesListingContext from '../../context/GamesListingContext'
 import {
   categoryOptions,
   platformOptions,
@@ -19,7 +19,7 @@ const GamesListingFilters = () => {
     setCurrentPage,
     resultsPerPage,
     setResultsPerPage
-  } = useContext(GamesContext)
+  } = useContext(GamesListingContext)
 
   return (
     <section className='pb-9' aria-label='games filter options'>
