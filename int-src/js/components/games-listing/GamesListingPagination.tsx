@@ -2,7 +2,7 @@ import { ReactElement, useContext, useMemo } from 'react'
 import GamesContext from '../../context/GamesContext'
 import { ChevronLeftIcon, ChevronRightIcon } from '../shared/Icons'
 
-const Pagination = () => {
+const GamesListingPagination = () => {
   const { gameItems, currentPage, setCurrentPage, resultsPerPage } =
     useContext(GamesContext)
 
@@ -75,4 +75,4 @@ const Pagination = () => {
   )
 }
 
-export default Pagination
+export default GamesListingPagination

@@ -1,4 +1,4 @@
-type FilterOptionProps = {
+type GamesListingFilterOptionProps = {
   label: string
   options: (string | number)[]
   currentValue?: string | number
@@ -6,13 +6,13 @@ type FilterOptionProps = {
   onFilterChange: (value: string) => void
 }
 
-const FilterOption = ({
+const GamesListingFilterOption = ({
   label,
   options,
   currentValue,
   onFilterChange,
   valueModifier
-}: FilterOptionProps) => {
+}: GamesListingFilterOptionProps) => {
   const filterId = label.toLowerCase().replaceAll(' ', '-')
 
   return (
@@ -41,4 +41,4 @@ const FilterOption = ({
   )
 }
 
-export default FilterOption
+export default GamesListingFilterOption

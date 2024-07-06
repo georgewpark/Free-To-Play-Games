@@ -3,7 +3,7 @@ import GamesContext from '../../context/GamesContext'
 import Container from '../shared/Container'
 import { ExternalLinkIcon } from '../shared/Icons'
 
-const GameAbout = () => {
+const GameDetailsAbout = () => {
   const { currentGame } = useContext(GamesContext)
 
   return (
@@ -37,4 +37,4 @@ const GameAbout = () => {
   )
 }
 
-export default GameAbout
+export default GameDetailsAbout

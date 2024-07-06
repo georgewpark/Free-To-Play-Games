@@ -1,11 +1,11 @@
 import { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Breadcrumbs from '../components/game-details/Breadcrumbs'
-import GameAbout from '../components/game-details/GameAbout'
-import GameHeader from '../components/game-details/GameHeader'
-import GameRequirements from '../components/game-details/GameRequirements'
+import GameDetailsAbout from '../components/game-details/GameDetailsAbout'
+import GameDetailsBreadcrumbs from '../components/game-details/GameDetailsBreadcrumbs'
+import GameDetailsHeader from '../components/game-details/GameDetailsHeader'
+import GameDetailsLoader from '../components/game-details/GameDetailsLoader'
+import GameDetailsRequirements from '../components/game-details/GameDetailsRequirements'
 import Footer from '../components/shared/Footer'
-import Loader from '../components/shared/Loader'
 import GamesContext from '../context/GamesContext'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
@@ -38,14 +38,14 @@ const GameDetails = () => {
   return (
     <div aria-live='polite'>
       {loading ? (
-        <Loader />
+        <GameDetailsLoader />
       ) : (
         <>
-          <Breadcrumbs />
-          <GameHeader />
+          <GameDetailsBreadcrumbs />
+          <GameDetailsHeader />
           <main className='py-4 lg:py-10'>
-            <GameAbout />
-            <GameRequirements />
+            <GameDetailsAbout />
+            <GameDetailsRequirements />
           </main>
           <Footer />
         </>

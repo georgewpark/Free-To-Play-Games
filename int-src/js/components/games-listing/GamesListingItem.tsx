@@ -4,12 +4,12 @@ import GamesContext from '../../context/GamesContext'
 import { Game } from '../../types/types'
 import { WebBrowserIcon, WindowsIcon } from '../shared/Icons'
 
-type GameItemProps = {
+type GamesListingItemProps = {
   game: Game
   index: number
 }
 
-const GameItem = ({ game, index }: GameItemProps) => {
+const GamesListingItem = ({ game, index }: GamesListingItemProps) => {
   const { firstGame } = useContext(GamesContext)
   const navigate = useNavigate()
 
@@ -52,4 +52,4 @@ const GameItem = ({ game, index }: GameItemProps) => {
   )
 }
 
-export default GameItem
+export default GamesListingItem

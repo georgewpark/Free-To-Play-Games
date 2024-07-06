@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
 import Container from '../shared/Container'
 
-const GameHeader = () => {
+const GameDetailsHeader = () => {
   const { currentGame } = useContext(GamesContext)
 
   return (
@@ -26,4 +26,4 @@ const GameHeader = () => {
   )
 }
 
-export default GameHeader
+export default GameDetailsHeader

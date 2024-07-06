@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
-import GameItem from './GameItem'
-import GridSkeleton from './GridSkeleton'
+import GamesListingItem from './GamesListingItem'
+import GamesListingLoader from './GamesListingLoader'
 
-const GamesList = () => {
+const GamesListingResults = () => {
   const { currentPage, resultsPerPage, gameItems, loading } =
     useContext(GamesContext)
 
@@ -13,7 +13,7 @@ const GamesList = () => {
   return (
     <section aria-live='polite' aria-label='games list'>
       {loading ? (
-        <GridSkeleton />
+        <GamesListingLoader />
       ) : (
         <>
           {gameItems.length > 0 ? (
@@ -23,7 +23,7 @@ const GamesList = () => {
               </p>
               <ul className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                 {gameItems.slice(firstItem, lastItem).map((game, i) => (
-                  <GameItem key={game.id} game={game} index={i} />
+                  <GamesListingItem key={game.id} game={game} index={i} />
                 ))}
               </ul>
             </>
@@ -38,4 +38,4 @@ const GamesList = () => {
   )
 }
 
-export default GamesList
+export default GamesListingResults

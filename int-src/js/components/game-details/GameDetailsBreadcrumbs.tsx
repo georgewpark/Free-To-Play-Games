@@ -1,10 +1,9 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import GamesContext from '../../context/GamesContext'
 import Container from '../shared/Container'
 
-const Breadcrumbs = () => {
+const GameDetailsBreadcrumbs = () => {
   const navigate = useNavigate()
   const { currentGame } = useContext(GamesContext)
 
@@ -29,4 +28,4 @@ const Breadcrumbs = () => {
   )
 }
 
-export default Breadcrumbs
+export default GameDetailsBreadcrumbs

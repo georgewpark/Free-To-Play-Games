@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
 import Container from '../shared/Container'
 
-const GameRequirements = () => {
+const GameDetailsRequirements = () => {
   const { currentGame } = useContext(GamesContext)
 
   const hasMinimumRequirements =
@@ -78,4 +78,4 @@ const GameRequirements = () => {
   )
 }
 
-export default GameRequirements
+export default GameDetailsRequirements

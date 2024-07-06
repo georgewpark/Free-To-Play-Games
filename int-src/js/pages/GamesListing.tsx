@@ -1,7 +1,8 @@
 import { useContext, useEffect, useRef } from 'react'
-import FiltersList from '../components/games-listing/FiltersList'
-import GamesList from '../components/games-listing/GamesList'
-import Pagination from '../components/games-listing/Pagination'
+import GamesListingFilters from '../components/games-listing/GamesListingFilters'
+import GamesListingHeader from '../components/games-listing/GamesListingHeader'
+import GamesListingPagination from '../components/games-listing/GamesListingPagination'
+import GamesListingResults from '../components/games-listing/GamesListingResults'
 import Container from '../components/shared/Container'
 import Footer from '../components/shared/Footer'
 import GamesContext from '../context/GamesContext'
@@ -70,18 +71,12 @@ const GamesListing = () => {
 
   return (
     <>
-      <header className='pb-8 pt-12 md:pt-16'>
-        <Container>
-          <h1 className='text-center text-3xl text-white md:text-4xl'>
-            Free-To-Play Games
-          </h1>
-        </Container>
-      </header>
+      <GamesListingHeader />
       <main>
         <Container classList='pb-10'>
-          <FiltersList />
-          <GamesList />
-          <Pagination />
+          <GamesListingFilters />
+          <GamesListingResults />
+          <GamesListingPagination />
         </Container>
       </main>
       <Footer />

@@ -1,7 +1,7 @@
 import { ReactElement, useContext } from 'react'
 import GamesContext from '../../context/GamesContext'
 
-const GridSkeleton = () => {
+const GamesListingLoader = () => {
   const { resultsPerPage } = useContext(GamesContext)
 
   let items: ReactElement[] = []
@@ -35,4 +35,4 @@ const GridSkeleton = () => {
   )
 }
 
-export default GridSkeleton
+export default GamesListingLoader

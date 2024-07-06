@@ -6,9 +6,9 @@ import {
   resultsPerPageOptions,
   sortOptions
 } from '../../data/FilterOptions'
-import FilterOption from './FilterOption'
+import GamesListingFilterOption from './GamesListingFilterOption'
 
-const FiltersList = () => {
+const GamesListingFilters = () => {
   const {
     selectedPlatform,
     setSelectedPlatform,
@@ -24,28 +24,28 @@ const FiltersList = () => {
   return (
     <section className='pb-9' aria-label='games filter options'>
       <ul className='mx-auto grid max-w-4xl grid-cols-2 gap-x-4 gap-y-3 md:grid-cols-4 lg:gap-x-9'>
-        <FilterOption
+        <GamesListingFilterOption
           label={'Sort By'}
           options={sortOptions}
           currentValue={selectedSort}
           valueModifier={(value: string) => value.replaceAll(' ', '-')}
           onFilterChange={(value: string) => setSelectedSort(value)}
         />
-        <FilterOption
+        <GamesListingFilterOption
           label={'Platform'}
           options={platformOptions}
           currentValue={selectedPlatform}
           valueModifier={(value: string) => value.split(' ')[0]}
           onFilterChange={(value: string) => setSelectedPlatform(value)}
         />
-        <FilterOption
+        <GamesListingFilterOption
           label={'Category'}
           options={categoryOptions}
           currentValue={selectedCategory}
           valueModifier={(value: string) => value.replaceAll(' ', '-')}
           onFilterChange={(value: string) => setSelectedCategory(value)}
         />
-        <FilterOption
+        <GamesListingFilterOption
           label={'Results Per Page'}
           options={resultsPerPageOptions}
           currentValue={resultsPerPage}
@@ -59,4 +59,4 @@ const FiltersList = () => {
   )
 }
 
-export default FiltersList
+export default GamesListingFilters
