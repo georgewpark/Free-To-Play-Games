@@ -3,7 +3,7 @@ import GamesListingContext from '../../context/GamesListingContext'
 import { ChevronLeftIcon, ChevronRightIcon } from '../shared/Icons'
 
 const GamesListingPagination = () => {
-  const { gameItems, currentPage, setCurrentPage, resultsPerPage } =
+  const { gameItems, currentPage, setCurrentPage, resultsPerPage, loading } =
     useContext(GamesListingContext)
 
   const totalPages = useMemo(
@@ -37,7 +37,7 @@ const GamesListingPagination = () => {
 
   return (
     <>
-      {gameItems.length > 0 && totalPages > 1 && (
+      {!loading && gameItems.length > 0 && totalPages > 1 && (
         <nav className='mt-8' aria-label='page navigation'>
           <p className='text-center'>
             Page {currentPage} of {totalPages}
