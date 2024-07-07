@@ -11,18 +11,29 @@ type MinSystemReq = {
   storage: string
 }
 
-export type Game = {
-  id: number
-  title: string
-  thumbnail: string
+export type GameSummary = {
   developer: string
+  genre: string
+  id: number
+  platform: string
   short_description: string
+  thumbnail: string
+  title: string
+}
+
+export type GameDetails = {
   description: string
+  developer: string
   game_url: string
   genre: string
+  id: number
+  minimum_system_requirements: MinSystemReq
   platform: string
   publisher: string
   release_date: string
   screenshots: Screenshot[]
-  minimum_system_requirements: MinSystemReq
+  short_description: string
+  status: string
+  thumbnail: string
+  title: string
 }

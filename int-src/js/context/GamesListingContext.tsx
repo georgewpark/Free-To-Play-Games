@@ -7,11 +7,11 @@ import {
   useRef,
   useState
 } from 'react'
-import { Game } from '../types/types'
+import { GameSummary } from '../types/types'
 
 type GamesListingContextType = {
-  gameItems: Game[]
-  setGameItems: Dispatch<SetStateAction<Game[]>>
+  gameItems: GameSummary[]
+  setGameItems: Dispatch<SetStateAction<GameSummary[]>>
   firstGame: RefObject<HTMLButtonElement>
   selectedPlatform: string
   setSelectedPlatform: Dispatch<SetStateAction<string>>
@@ -38,7 +38,7 @@ const GamesListingContext = createContext({} as GamesListingContextType)
 export const GamesListingProvider = ({
   children
 }: GamesListingProviderProps) => {
-  const [gameItems, setGameItems] = useState<Game[]>([])
+  const [gameItems, setGameItems] = useState<GameSummary[]>([])
   const [selectedPlatform, setSelectedPlatform] = useState('all')
   const [selectedSort, setSelectedSort] = useState('relevance')
   const [selectedCategory, setSelectedCategory] = useState('all')

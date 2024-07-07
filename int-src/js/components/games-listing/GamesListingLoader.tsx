@@ -15,7 +15,8 @@ const GamesListingLoader = () => {
       >
         <div className='aspect-video bg-slate-500'></div>
         <div className='flex grow flex-col p-4'>
-          <div className='mb-2 h-7 rounded bg-slate-500'></div>
+          <div className='mb-1 h-6 rounded bg-slate-500'></div>
+          <div className='mb-2 h-5 w-20 rounded bg-slate-500'></div>
           <div className='mb-4 h-16 rounded bg-slate-500'></div>
           <div className='mt-auto flex items-center justify-between'>
             <div className='h-7 w-16 rounded bg-slate-500'></div>

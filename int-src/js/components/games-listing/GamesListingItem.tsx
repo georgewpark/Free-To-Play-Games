@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import GamesListingContext from '../../context/GamesListingContext'
-import { Game } from '../../types/types'
+import { GameSummary } from '../../types/types'
 import { WebBrowserIcon, WindowsIcon } from '../shared/Icons'
 
 type GamesListingItemProps = {
-  game: Game
+  game: GameSummary
   index: number
 }
 
@@ -26,9 +26,12 @@ const GamesListingItem = ({ game, index }: GamesListingItemProps) => {
         />
       </div>
       <div className='flex grow flex-col p-4'>
-        <h2 className='mb-2 text-xl transition-colors group-focus-within:text-yellow-400 group-hover:text-yellow-400'>
+        <h2 className='text-xl transition-colors group-focus-within:text-yellow-400 group-hover:text-yellow-400'>
           {game.title}
         </h2>
+        <p className='mb-2 text-sm'>
+          By <span className='text-yellow-400'>{game.developer}</span>
+        </p>
         <p className='mb-4 font-light leading-snug'>{game.short_description}</p>
         <div className='mt-auto flex items-center justify-between gap-1'>
           <p className='inline-block rounded bg-yellow-400 p-1.5 leading-none text-slate-900'>
