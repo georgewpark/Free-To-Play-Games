@@ -18,7 +18,8 @@ const GamesListing = () => {
     firstGame,
     currentPage,
     setCurrentPage,
-    setLoading
+    setLoading,
+    setError
   } = useContext(GamesListingContext)
 
   const initialRender = useRef(true)
@@ -43,13 +44,18 @@ const GamesListing = () => {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.status === 0) {
+        if (data.status === 0 || data.message) {
           setGameItems([])
+          setError(true)
         } else {
           setGameItems(data)
+          setError(false)
         }
       })
-      .catch(() => setGameItems([]))
+      .catch(() => {
+        setGameItems([])
+        setError(true)
+      })
       .finally(() => {
         setLoading(false)
 

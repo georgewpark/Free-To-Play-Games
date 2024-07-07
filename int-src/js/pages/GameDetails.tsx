@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import GameDetailsAbout from '../components/game-details/GameDetailsAbout'
 import GameDetailsBreadcrumbs from '../components/game-details/GameDetailsBreadcrumbs'
+import GameDetailsError from '../components/game-details/GameDetailsError'
 import GameDetailsHeader from '../components/game-details/GameDetailsHeader'
 import GameDetailsLoader from '../components/game-details/GameDetailsLoader'
 import GameDetailsRequirements from '../components/game-details/GameDetailsRequirements'
@@ -10,7 +11,8 @@ import GameDetailsContext from '../context/GameDetailsContext'
 import { apiBaseUrl, apiHost, apiKey } from '../data/ApiDetails'
 
 const GameDetails = () => {
-  const { setCurrentGame, loading, setLoading } = useContext(GameDetailsContext)
+  const { setCurrentGame, loading, setLoading, error, setError } =
+    useContext(GameDetailsContext)
   const { gameId } = useParams()
 
   useEffect(() => {
@@ -29,6 +31,17 @@ const GameDetails = () => {
       .then(res => res.json())
       .then(data => {
         setCurrentGame(data)
+
+        if (data.status === 0 || data.message) {
+          setError(true)
+        } else {
+          setError(false)
+        }
+      })
+      .catch(() => {
+        setError(true)
+      })
+      .finally(() => {
         setLoading(false)
       })
 
@@ -37,9 +50,9 @@ const GameDetails = () => {
 
   return (
     <div aria-live='polite'>
-      {loading ? (
-        <GameDetailsLoader />
-      ) : (
+      {error && <GameDetailsError />}
+      {loading && !error && <GameDetailsLoader />}
+      {!loading && !error && (
         <>
           <GameDetailsBreadcrumbs />
           <GameDetailsHeader />

@@ -4,7 +4,7 @@ import GamesListingItem from './GamesListingItem'
 import GamesListingLoader from './GamesListingLoader'
 
 const GamesListingResults = () => {
-  const { currentPage, resultsPerPage, gameItems, loading } =
+  const { currentPage, resultsPerPage, gameItems, loading, error } =
     useContext(GamesListingContext)
 
   const firstItem = currentPage * resultsPerPage - resultsPerPage
@@ -33,9 +33,14 @@ const GamesListingResults = () => {
             .map((game, i) => (
               <GamesListingItem key={game.id} game={game} index={i} />
             ))}
-        {!loading && gameItems.length === 0 && (
+        {!loading && !error && gameItems.length === 0 && (
           <li className='col-span-full text-center text-xl'>
             No games found for selected filters.
+          </li>
+        )}
+        {!loading && error && (
+          <li className='col-span-full text-center text-xl'>
+            Error retrieving games.
           </li>
         )}
       </ul>

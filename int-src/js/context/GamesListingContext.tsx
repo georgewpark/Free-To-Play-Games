@@ -25,6 +25,8 @@ type GamesListingContextType = {
   setResultsPerPage: Dispatch<SetStateAction<number>>
   loading: boolean
   setLoading: Dispatch<SetStateAction<boolean>>
+  error: boolean
+  setError: Dispatch<SetStateAction<boolean>>
 }
 
 type GamesListingProviderProps = {
@@ -43,6 +45,7 @@ export const GamesListingProvider = ({
   const [currentPage, setCurrentPage] = useState(1)
   const [resultsPerPage, setResultsPerPage] = useState(40)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const firstGame = useRef<HTMLButtonElement>(null)
 
   return (
@@ -62,7 +65,9 @@ export const GamesListingProvider = ({
         currentPage,
         setCurrentPage,
         loading,
-        setLoading
+        setLoading,
+        error,
+        setError
       }}
     >
       {children}
