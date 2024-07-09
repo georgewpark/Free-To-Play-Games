@@ -6,7 +6,7 @@ const GameDetailsHeader = () => {
   const { currentGame } = useContext(GameDetailsContext)
 
   return (
-    <header className='relative h-96'>
+    <header className='relative h-80 lg:h-96'>
       <Container classList='flex h-full'>
         <div className='absolute inset-0 -z-10 after:absolute after:inset-0 after:bg-black after:opacity-75'>
           <img
@@ -18,7 +18,7 @@ const GameDetailsHeader = () => {
             className='h-full w-full object-cover'
           />
         </div>
-        <h1 className='m-auto text-center text-4xl text-white md:text-6xl'>
+        <h1 className='m-auto text-center text-4xl text-white lg:text-6xl'>
           {currentGame.title}
         </h1>
       </Container>

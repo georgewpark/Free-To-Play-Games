@@ -36,7 +36,7 @@ const GameDetailsAbout = () => {
               </a>
             )}
           </div>
-          <div className='flex w-full flex-col gap-14'>
+          <div className='flex w-full flex-col gap-16 md:gap-14'>
             <ul className='grid grid-cols-2 gap-6 text-center'>
               <li>
                 <h3 className='mb-1 text-yellow-400'>Status</h3>
