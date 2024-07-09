@@ -33,8 +33,10 @@ const GameDetails = () => {
         setCurrentGame(data)
 
         if (data.status === 0 || data.message) {
+          document.title = `${document.title} - Error`
           setError(true)
         } else {
+          document.title = `${document.title} - ${data.title}`
           setError(false)
         }
       })

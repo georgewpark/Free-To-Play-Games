@@ -75,6 +75,10 @@ const GamesListing = () => {
     }
   }, [currentPage])
 
+  useEffect(() => {
+    document.title = document.title.split(' -')[0]
+  }, [])
+
   return (
     <>
       <GamesListingHeader />
