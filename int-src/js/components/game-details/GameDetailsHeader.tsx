@@ -9,9 +9,7 @@ import { PauseIcon, PlayIcon } from '../shared/Icons'
 
 const GameDetailsHeader = () => {
   const { currentGame } = useContext(GameDetailsContext)
-
   const [pauseAutoplay, setPauseAutoplay] = useState(false)
-
   const swiperRef = useRef<SwiperRef>(null)
 
   const hasScreenshot = currentGame.screenshots[0]?.image
