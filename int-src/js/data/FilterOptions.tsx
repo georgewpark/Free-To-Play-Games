@@ -6,11 +6,11 @@ export const sortOptions: string[] = [
   'Popularity'
 ]
 export const categoryOptions: string[] = [
+  'All',
   '2D',
   '3D',
   'Action',
   'Action RPG',
-  'All',
   'Anime',
   'Battle Royale',
   'Card',
