@@ -6,7 +6,7 @@ Using React to display and filter free-to-play games retrieved from the [FreeToG
 
 ## Live Demo
 
-A live demo is available on [CodePen](https://codepen.io/GeorgePark/full/vYQjWXO) and [Netlify](https://free-to-play-games.netlify.app/).
+A live demo is available on [Netlify](https://free-to-play-games.netlify.app/) and [CodePen](https://codepen.io/GeorgePark/full/vYQjWXO).
 
 ## License
 
