@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import Container from '../shared/Container'
 
-const GamesListingHeader = () => {
+const GamesListingHeader = memo(() => {
   return (
     <header>
       <Container classList='pb-8 pt-12 md:pt-16'>
@@ -10,6 +11,6 @@ const GamesListingHeader = () => {
       </Container>
     </header>
   )
-}
+})
 
 export default GamesListingHeader

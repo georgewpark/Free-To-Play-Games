@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import Container from './Container'
 import { ExternalLinkIcon } from './Icons'
 
-const Footer = () => {
+const Footer = memo(() => {
   return (
     <footer className='mt-auto bg-gray-950'>
       <Container classList='py-4'>
@@ -19,6 +20,6 @@ const Footer = () => {
       </Container>
     </footer>
   )
-}
+})
 
 export default Footer
