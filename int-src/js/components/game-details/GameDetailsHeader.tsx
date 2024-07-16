@@ -18,11 +18,11 @@ const GameDetailsHeader = () => {
   const toggleCarouselAutoplay = () => {
     if (pauseAutoplay) {
       // Resume autoplay
-      swiperRef?.current?.swiper?.autoplay?.start()
+      swiperRef?.current?.swiper?.autoplay?.resume()
       setPauseAutoplay(false)
     } else {
       // Pause autoplay
-      swiperRef?.current?.swiper?.autoplay?.stop()
+      swiperRef?.current?.swiper?.autoplay?.pause()
       setPauseAutoplay(true)
     }
   }
@@ -38,6 +38,7 @@ const GameDetailsHeader = () => {
                 delay: 3000
               }}
               effect={'fade'}
+              observer={true}
               modules={[Autoplay, EffectFade]}
               className='h-full w-full'
             >
