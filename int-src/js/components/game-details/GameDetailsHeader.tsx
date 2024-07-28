@@ -18,11 +18,11 @@ const GameDetailsHeader = () => {
   const toggleCarouselAutoplay = () => {
     if (pauseAutoplay) {
       // Resume autoplay
-      swiperRef?.current?.swiper?.autoplay?.resume()
+      swiperRef?.current?.swiper?.autoplay?.start()
       setPauseAutoplay(false)
     } else {
       // Pause autoplay
-      swiperRef?.current?.swiper?.autoplay?.pause()
+      swiperRef?.current?.swiper?.autoplay?.stop()
       setPauseAutoplay(true)
     }
   }
